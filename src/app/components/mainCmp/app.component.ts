@@ -4,19 +4,14 @@ import { Component } from '@angular/core';
 // Définir le décorateur @Component :
 @Component({
   selector: 'my-app',
-  template: `
-  
-    <h1>Hello {{name}}, how are you ?</h1>`,
-  styles: [`
-    h1{
-      color:red;
-      margin: 0;
-      text-transform: uppercase;
-    }
-  `]
+
+  // Ajouter un fichier HTML pour la vue :
+  templateUrl: 'app/components/mainCmp/app.component.html' // (Tout le chemin depuis la racine)
+
 })
 
 // Exporter la class du composant :
 export class AppComponent  {
   name = 'Arigna';
+
 }
