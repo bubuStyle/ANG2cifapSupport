@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    font: 16px 'Tahoma', sans-serif;
+    margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 100;
+    margin: 0;
+    text-align: center;
+}
+* {
+    box-sizing: border-box;
+}
+p {
+    margin: 0;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    outline: none;
+    color: inherit;
+}
+/* *//* *//* *//* *//* *//* *//* *//* *//* */
+app-header {
+    background: #ccc;
+}
