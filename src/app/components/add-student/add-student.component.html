@@ -1,3 +1,12 @@
-<p>
-  add-student works!
-</p>
+<h2>Ajouter un étudiant dans la liste</h2>
+
+<form (submit)="addNewStudent(newStudent)">
+
+  <input type="number" value="myListLength">
+  <input type="text" name="firstname" placeholder="Indiquer un prénom" [(ngModel)]="newStudent.firstName" required>
+  <input type="text" name="lastname" placeholder="Indiquer un nom" [(ngModel)]="newStudent.lastName" required>
+  <input type="number" name="state" placeholder="Indiquer un état" [(ngModel)]="newStudent.state" required>
+
+  <input type="submit" value="Ajouter un étudiant">
+
+</form>
