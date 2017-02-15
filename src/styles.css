@@ -1,37 +1,96 @@
-/* You can add global styles to this file, and also import other style files */
-body {
-    font: 16px 'Tahoma', sans-serif;
-    margin: 0;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: 100;
-    margin: 0;
-    text-align: center;
-}
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+/* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* */
+/* Reset CSS */
 * {
-    box-sizing: border-box;
-}
-p {
-    margin: 0;
-}
-ul {
+    /* Faire en sorte de supprimer toutes les marges : */
     margin: 0;
     padding: 0;
+
+    /* Intégrer le padding, les bordures dans la largeur et la hauteur des blocs : */
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
-li {
-    list-style: none;
+
+/* Faire en sorte que 1rem soit égale à 10px : */
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
 }
 a {
     text-decoration: none;
     outline: none;
-    color: inherit;
 }
-/* *//* *//* *//* *//* *//* *//* *//* *//* */
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+/* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* */
 app-header {
-    background: #ccc;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #3F51B5;
+    color: #fff;
+    padding: 2rem;
+    text-transform: uppercase;
+    z-index: 1;
+}
+app-header li {
+    display: inline-block;
+    margin-right: 1rem;
+}
+app-header a {
+    background: #fff;
+    padding: .5rem 1rem;
+    color: #3F51B5;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+app-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background: #3F51B5;
+    padding: 1rem;
+    color: #fff;
+}
+app-footer a {
+    color: #fff;
+}
+
+/*Style main*/
+router-outlet + * {
+    padding: 11rem 2rem 6rem 2rem;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+/*Style Dashboard*/
+app-dashboard article {
+    padding: 2rem;
+    color: #fff;
+    background: rgba(63,81,181, .5);
+    margin: 1rem auto;
+    position: relative;
+}
+
+app-dashboard article span {
+    position: absolute;
+    top: 1.8rem;
+    right: 2rem;
+    background: #fff;
+    color: #3F51B5;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: .5rem 1rem;
 }
