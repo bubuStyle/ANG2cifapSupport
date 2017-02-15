@@ -2,6 +2,9 @@
 // La class OnInit permet d'éxécuter du code une fois que le composant est chargé :
 import { Component, OnInit } from '@angular/core';
 
+// Importer la class du Router :
+import { Router } from '@angular/router';
+
 // 1) Importer la class du service :
 import { StudentService } from '../../services/student.service';
 
@@ -21,13 +24,19 @@ export class DashboardComponent implements OnInit {
 
   // 3) Définir une variable pour utiliser le service :
   constructor(
-    private studentService: StudentService
+    private studentService: StudentService,
+    private router: Router
   ) {}
 
   // Créer une fonction pour récupérer la liste des étudiants :
   getStudentFromService(){
     this.studentService.showStudentList().then( data => this.myStudentList = data );
   }
+
+  // Créer une fonction pour afficher le détail d'un étudiant :
+  showStudentDetail(id) {
+    this.router.navigateByUrl('/edit-student/' + id);
+  };
 
   // La fonction ngOnInit est éxécuter quand le composant est chargé :
   ngOnInit() {

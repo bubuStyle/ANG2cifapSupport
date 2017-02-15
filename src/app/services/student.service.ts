@@ -67,4 +67,20 @@ export class StudentService {
     return Promise.resolve(LIST.length);
   };
 
+  // Créer une fonction pour MAJ un item du tableau LIST :
+  editStudentList(){
+    // Créer une variable pour l'item à modifier :
+    let selectedStudent = LIST[0];
+
+    // Modifier les infos de l'item sélectionné :
+    selectedStudent.firstName = 'Arigna';
+    selectedStudent.lastName = 'Phengphong';
+    selectedStudent.state = 0;
+  };
+
+  // Créer une fonction pour récup les infos d'un étudiant :
+  getSelectedStudentInfo(id): Promise<any>{
+    return Promise.resolve(LIST[id]);
+  };
+
 };

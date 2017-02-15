@@ -1,1 +1,16 @@
 <h2>Modifier l'étudiant</h2>
+
+<section *ngIf="selectedStudent">
+
+  <form (submit)="editSelectedStudent()">
+
+    <input type="number" value="myListLength">
+    <input type="text" name="firstname" placeholder="Indiquer un prénom" [(ngModel)]="selectedStudent.firstName" required>
+    <input type="text" name="lastname" placeholder="Indiquer un nom" [(ngModel)]="selectedStudent.lastName" required>
+    <input type="number" name="state" placeholder="Indiquer un état" [(ngModel)]="selectedStudent.state" required>
+
+    <input type="submit" value="Modifier l'étudiant">
+
+  </form>
+
+</section>
